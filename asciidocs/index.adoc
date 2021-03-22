@@ -951,7 +951,7 @@ Person -- Task
 * Erstellen von Meilensteinen
 * Zuordnen von Issues
 
-=== Übung: Erstellen er User Stories und der ersten Tasks
+=== Übung: Erstellen der User Stories und der ersten Tasks
 
 Termin: bis nach den Ferien
 
@@ -963,9 +963,146 @@ Termin: bis nach den Ferien
 ** Anmerkung: die zeitlich näheren US werden bezüglich Tasks detaillierter spezifiziert
 
 
+== 2021-03-08
+
+=== Curriculum SYP3
+
+* Git
+** Aufbau von Versionierungssystemen
+** Arten von Versionierungssystem
+** Arbeitsabläufe (workflows)
+*** clone
+*** commit
+*** branch
+*** merge
+*** u.v.a.m.
+* Docker
+** Dockerfile
+** docker-compose
+** docker hub (registry)
+* UML
+** Use Case Diagram
+** Class Diagram
+** Object Diagram
+** State Diagram
+** Activity Diagram
+** Deployment Diagram (Verteilungsdiagramm)
+** Kompositionsstrukturdiagramm
+* doc-as-code
+** asciidoctor
+** plantuml
+* github
+** pages
+** projects
+* Vorgehensmodelle
+*** Was ist ein Vorgehensmodell?
+*** Welchen Zweck erfüllen Vorgehensmodelle?
+*** Arten:
+**** klassische V.
+***** Wasserfallmodell
+***** V-Modell
+**** agile V.
+***** Scrum (Epic, User Story, Task)
+***** ev. auch Kanban, soweit es github betrifft
+*** Wie geht man bei einem konkreten Projekt vor?
+* Projektdokumentation
+** Projektantrag
+** Projektauftrag
+** *Pflichtenheftes*
+** *Systementwurf* (Grob- und Feinentwurf)
+* Qualitätssicherung
+** einfache Unit-Tests mit junit und assertJ-core
+** einfache DB-Tests mit assertJ-db (und ev. JDBC, JDBC-metadata)
 
 
 
+
+
+
+
+
+
+[plantuml,cld,png]
+----
+@startuml
+left to right direction
+
+class Match
+
+class Team
+
+class Player
+
+class Event
+
+class EventType
+note right: YELLOW\nRED\nIN\nOUT\nPENALTY\nGOAL
+
+Match "*" -- "1" Team: guests
+Match "*" -- "1" Team: home
+Team "1" <-- "*" Player
+Event "*" --> "1" EventType
+Match "1" <-- "*" Event
+Player "1" <-up- "*" Event
+
+@enduml
+----
+
+=== Besprechen des SYP3-Curriculums
+
+=== Scrum-Foliensatz (Wiederholung)
+
+* inkl. Vorgehensmodelle
+
+
+== 2021-03-15
+
+=== LZK Band
+
+=== Docker
+
+
+== 2021-03-22
+
+Gruppe 2
+
+=== Docker Einführung
+
+* Arten der Nutzung von Docker
+** Betrieb von Software  (zB WebServer, DB-Server, usw)
+** Utility Container (zB AsciiDoc)
+
+.Mehrere Container können ein Docker-Image nutzen
+image:docker01.png[]
+
+.Überblick Docker-Images, -Container, -Volumes, ...
+image:docker02.png[]
+
+
+=== Automatisierung (gh-actions, Jenkins)
+
+.Pipeline
+[plantuml,pipeline,png]
+----
+@startuml
+left to right direction
+node gitrepo {
+  file ".java" as code
+}
+queue {
+  agent compile
+  agent package
+  agent test
+  agent deploy
+}
+node production
+code --> compile
+compile --> package
+package --> test
+test --> deploy
+deploy --> production
+@enduml
+----
 
 
 [source,shell]
