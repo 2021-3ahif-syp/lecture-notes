@@ -387,6 +387,9 @@ PL ... Projektleiter
 
 https://classroom.github.com/g/AqJgD5oa
 
+image:v-modell.png[]
+
+image:informationswuerfel.png[]
 
 == 2020-11-30
 
