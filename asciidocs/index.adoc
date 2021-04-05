@@ -962,6 +962,11 @@ Termin: bis nach den Ferien
 ** und dem Teammitglied zugeordnet
 ** Anmerkung: die zeitlich näheren US werden bezüglich Tasks detaillierter spezifiziert
 
+== 2021-03-01
+
+image:project-overview.png[]
+
+image:one-repo-per-aggregate.png[]
 
 == 2021-03-08
 
