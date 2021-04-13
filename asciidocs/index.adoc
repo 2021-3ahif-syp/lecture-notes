@@ -1112,6 +1112,21 @@ deploy --> production
 @enduml
 ----
 
+== 2021-04-12 Gruppe 1
+
+== Einführung Docker
+
+https://htl-leonding-college.github.io/docker-lecture-notes/docker.html
+
+image:docker-lightweight-virt.png[]
+
+image:docker-image-container.png[]
+
+
+
+
+
+
 
 [source,shell]
 ----
