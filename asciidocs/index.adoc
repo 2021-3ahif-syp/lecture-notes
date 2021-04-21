@@ -1114,7 +1114,7 @@ deploy --> production
 
 == 2021-04-12 Gruppe 1
 
-== Einführung Docker
+=== Einführung Docker
 
 https://htl-leonding-college.github.io/docker-lecture-notes/docker.html
 
@@ -1123,14 +1123,41 @@ image:docker-lightweight-virt.png[]
 image:docker-image-container.png[]
 
 
+== 2021-04-19 Gruppe A
 
+* Was ist ein Dienst? (Listener an einem Port)
+** zB für Web, Db usw
 
+* Java und C#: compile, ....
 
+=== Dockerfile
 
+==== Erstellen eines nginx-Servers
 
+.Dockerfile
 [source,shell]
 ----
+FROM nginx:1.19.10
+COPY html /usr/share/nginx/html
+EXPOSE 80
+----
 
+https://medium.com/myriatek/using-docker-to-run-a-simple-nginx-server-75a48d74500b
+
+
+.html/index.html
+[source,html]
+----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3ahif</title>
+</head>
+<body>
+<h1>Hello 3ahif!</h1>
+</body>
+</html>
 ----
 
 
