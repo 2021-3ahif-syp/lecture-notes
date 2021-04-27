@@ -1160,10 +1160,23 @@ https://medium.com/myriatek/using-docker-to-run-a-simple-nginx-server-75a48d7450
 </html>
 ----
 
+== 2021-04-26 docker-compose Gruppe 2
+
+image:web-server.png[]
+
+image:http-header-body.png[]
+
+image:ports-sockets.png[]
+
+* https://ssaurel.medium.com/create-a-simple-http-web-server-in-java-3fc12b29d5fd[Create a simple HTTP Web Server in Java, window="_blank"]
+
+image:java-ins-internet.png[]
 
 
+image:servlet-filter.png[]
 
-
+* Source: https://docstore.mik.ua/orelly/xml/jxslt/ch08_04.htm[Servlet Filters, window="_blank"]
+* https://www.oracle.com/java/technologies/filters.html[The Essentials of Filters, window="_blank"]
 
 
 [source,shell]

@@ -10,3 +10,4 @@ gh-pages
 
 # die intellij-Projektdaten im Root sollen nicht gespeichert werden
 /.idea
+*.iml
