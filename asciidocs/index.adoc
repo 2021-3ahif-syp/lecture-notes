@@ -1160,7 +1160,7 @@ https://medium.com/myriatek/using-docker-to-run-a-simple-nginx-server-75a48d7450
 </html>
 ----
 
-== 2021-04-26 docker-compose Gruppe 2
+== 2021-04-26 docker-compose Gruppe B
 
 image:web-server.png[]
 
@@ -1177,6 +1177,14 @@ image:servlet-filter.png[]
 
 * Source: https://docstore.mik.ua/orelly/xml/jxslt/ch08_04.htm[Servlet Filters, window="_blank"]
 * https://www.oracle.com/java/technologies/filters.html[The Essentials of Filters, window="_blank"]
+
+
+== 2021-05-03 docker-compose Gruppe A
+
+* Bis zu Servlets (SimpleServlet, BlockingServlet)
+
+
+
 
 
 [source,shell]
