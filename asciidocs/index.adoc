@@ -1184,68 +1184,28 @@ image:servlet-filter.png[]
 * Bis zu Servlets (SimpleServlet, BlockingServlet)
 
 
+== 2021-05-03 docker-compose Gruppe B
+
+* Begonnen mit Servlets
+
+* work/docker-compose/servlet-jdbc-demo (Musterlösung)
+* work/docker-compose/servlet-jdbc-demo-3ahif (Gruppe A + B -> git-branch)
 
 
 
-[source,shell]
-----
+== 2021-05-17
 
-----
+* ganze Klasse anwesend
 
+* LZK: UCD, FA, NFA
 
+=== Scrum
 
-
-
-
-
-[source,shell]
-----
-
-----
-
-
-
-
-
-
-
-[source,shell]
-----
-
-----
+* Foliensatz Vorgehensmodelle (Scrum) bis Folie 25 (zum 3. Mal wiederholt)
 
 
 
 
-
-
-
-[source,shell]
-----
-
-----
-
-
-
-
-
-
-
-[source,shell]
-----
-
-----
-
-
-
-
-
-
-
-[source,shell]
-----
-
-----
 
 
 
