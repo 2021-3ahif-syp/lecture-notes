@@ -1,0 +1,62 @@
+@startuml
+
+class Fachrichtung {
+  - bezeichnung: String
+}
+
+class Stichwort {
+  - stichwort: String
+}
+
+class Buch {
+  - autor: String
+  - bestand: int
+  - titel: String
+  - fachrichtung: Fachrichtung
+  - isbnNr: String
+  - ausleihdauerTage: int
+  - mahnspesen: BigDecimal
+}
+
+class Entlehner {
+  - vorname: String
+  - nachname: String
+  - strasse: String
+  - plz: int
+  - ort: String
+}
+
+class Entlehnvorgang {
+  - buch: Buch
+  - entlehner: Entlehner
+  - entlehnDatum: LocalDate
+  - rueckgabeDatum: LocalDate
+}
+
+class Mahnung {
+  - entlehnvorgang: Entlehnvorgang
+  - mahnDatum: LocalDate
+  - mahnstufe: Mahnstufe
+}
+
+class Mahnstufe {
+  - mahnstufe: Mahnstufe
+  - mahnFristTage: int
+  - mahnSpesenFaktor: double
+  - bezeichnung: String
+}
+
+class BuchStichwort {
+  - buch: Buch
+  - stichwort: Stichwort
+}
+
+Buch "*" -l--> "1" Fachrichtung
+Buch "*" -r- "*" Stichwort
+Buch "*" -- "*" Entlehner : < entlehnt
+(Buch,Entlehner) .. Entlehnvorgang
+(Buch,Stichwort) .. BuchStichwort
+Entlehnvorgang "1" <-- "*" Mahnung
+Mahnung "*" -r-> "1" Mahnstufe
+
+@enduml

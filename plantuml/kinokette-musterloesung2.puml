@@ -1,0 +1,79 @@
+@startuml
+class Kino {
+}
+
+class Saal {
+  -kino: Kino
+}
+
+class Genre {
+}
+
+class Film {
+  -genre: Genre
+}
+
+class Sitz {
+  -reihe: int
+  -platz: int
+}
+
+class Vorstellung {
+  -datumUhrzeit: LocalDateTime
+}
+
+
+class Reihe {
+  -saal: Saal
+  -standardPreis: BigDecimal
+}
+
+class Vorstellungspreis {
+  -vorstellung: Vorstellung
+  -reihe: Reihe
+  -sonderpreis: BigDecimal
+}
+
+class Eintrittskarte {
+  -sitz: Sitz
+  -vorstellung: Vorstellung
+}
+
+class Person {
+  -vorname: String
+  -nachname: String
+  -nationalitaet: String
+  -dob: LocalDate
+  -dod: LocalDate
+  -bemerkung: String
+}
+
+class Regisseur {
+}
+
+class Schauspieler {
+}
+
+class Regie {
+  -film: Film
+  -regisseur: Regisseur
+}
+
+class Engagement {
+  -film: Film
+  -schauspieler: Schauspieler
+}
+
+Kino "1" <-- "*" Saal: hat >
+Saal "1" <-left- "*" Reihe: hat >
+Reihe "1" <-- "*" Sitz: hat >
+(Saal,Film) .. Vorstellung
+(Vorstellung,Reihe) .. Vorstellungspreis
+Sitz "1" <-r- "*" Eintrittskarte
+Vorstellung "1" <-- "*" Eintrittskarte
+Genre "1" <-r- "*" Film
+Person <|-u- Schauspieler
+Person <|-u- Regisseur
+(Film,Regisseur) .. Regie
+(Film,Schauspieler) .. Engagement
+@enduml

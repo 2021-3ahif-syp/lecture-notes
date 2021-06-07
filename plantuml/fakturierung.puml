@@ -1,0 +1,24 @@
+@startuml
+class Produkt {
+  - preis: BigDecimal
+}
+
+class Rechnungsposition {
+  - anzahl: int
+  - preis: BigDecimal
+  - produkt: Produkt
+  - rechnung: Rechnung
+}
+
+class Rechnung {
+  - id: Long
+  - rechDatum: LocalDate
+  - kunde: Kunde
+}
+
+Produkt "*" -- "*" Rechnung : wird verkauft >
+Rechnung "*" --> "1" Kunde
+(Produkt,Rechnung) .. Rechnungsposition
+
+
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+circle first as "initial \ncommit"
+circle second as " "
+circle third as "last \ncommit"
+card MASTER
+card HEAD
+first <-right- second
+second <-right- third
+MASTER --> third
+HEAD -down-> first
+@enduml
